@@ -19,7 +19,12 @@ C2.add(new Aircraft('F16'))
 console.log(C1.getStatus())
 console.log(C2.getStatus())
 console.log('<-------Filled------->')
-C1.fill()
+try {
+    C1.fill()
+}
+catch(e){
+    console.log(e)
+}
 console.log(C1.getStatus())
 console.log('<-------Fight------->')
 C1.fight(C1)
