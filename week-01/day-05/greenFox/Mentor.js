@@ -1,9 +1,7 @@
-
-class Mentor {
-    constructor(name = 'Jane Doe', age = 30, gender = 'female', level = 'intermediate') {
-        this.name = name
-        this.age = age
-        this.gender = gender
+const Person = require('./Person')
+class Mentor extends Person {
+    constructor(name, age, gender, level = 'intermediate') {
+       super(name, age, gender)
         this.level = level
     }
 

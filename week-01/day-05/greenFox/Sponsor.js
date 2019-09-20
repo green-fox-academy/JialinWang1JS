@@ -1,9 +1,7 @@
-
-class Sponsor {
-    constructor(name = 'Jane Doe', age = 30, gender = 'female', company = 'Google') {
-        this.name = name
-        this.age = age
-        this.gender = gender
+const Person = require('./Person')
+class Sponsor extends Person{
+    constructor(name, age, gender, company = 'Google') {
+        super(name, age, gender)
         this.company = company
         this.hiredStudents = 0
     }
