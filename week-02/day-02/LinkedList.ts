@@ -1,6 +1,6 @@
 import { LinkedList } from './dataStructures'
 
-class Node {
+export class Node {
     next: Node
     value: string
 
