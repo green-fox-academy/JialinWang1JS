@@ -1,10 +1,10 @@
 export class Grid {
     hasMine: boolean
-    count:number
-    touched:boolean
-    posX:number
-    poxY:number
-    constructor(posX, poxY) {
+    count: number
+    touched: boolean
+    posX: number
+    poxY: number
+    constructor(posX: number, poxY: number) {
         this.touched = false
         this.hasMine = false
         this.count = 0

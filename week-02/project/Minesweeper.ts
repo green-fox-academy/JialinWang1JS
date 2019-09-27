@@ -1,5 +1,4 @@
 import { Grid } from './boardGrid'
-import { toUnicode } from 'punycode'
 
 export class Minesweeper {
     private size: number
@@ -30,11 +29,13 @@ export class Minesweeper {
             if (!this.board[x][y].hasMine) {
                 this.board[x][y].hasMine = true
                 i++
+                console.log(i);
+
             }
         }
     }
 
-    print(): void {
+    print(gameOver: boolean = false): void {
         if (!this.board.length || !this.size || !this.mines) return
 
         //initial space
@@ -51,11 +52,30 @@ export class Minesweeper {
 
         console.log(x)
         for (let i = 0; i < this.size; i++) {
-            let y: string = String.fromCharCode(65 + i) + ' ';
+            let girdPrint: string = String.fromCharCode(65 + i) + ' ';
             for (let j = 0; j < this.size; j++) {
-                y += (this.board[i][j].touched ? (this.board[i][j].hasMine ? 'X' : this.board[i][j].count) : '#') + gap
+                // girdPrint += ( (this.board[i][j].touched || gameOver) ? (this.board[i][j].hasMine ? 'X' : (this.board[i][j].count ? this.board[i][j].count : '_')) : '#') + gap
+
+                if(this.board[i][j].touched && this.board[i][j].hasMine){
+                    girdPrint += 'O' + gap
+                }
+                else if(gameOver && this.board[i][j].hasMine){
+                    girdPrint += 'X' + gap
+                }
+                else if(gameOver){
+                    girdPrint += '_' + gap
+                }
+                else if(this.board[i][j].touched && !this.board[i][j].count){
+                    girdPrint += '_' + gap
+                }
+                else if(this.board[i][j].touched){
+                    girdPrint += this.board[i][j].count + gap
+                }
+                else{
+                    girdPrint += '#' + gap
+                }
             }
-            console.log(y)
+            console.log(girdPrint)
         }
     }
     checkMinesAround(posX: number, posY: number) {
