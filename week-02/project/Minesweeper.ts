@@ -10,7 +10,14 @@ export class Minesweeper {
         this.mines = mines
         this.board = []
     }
-
+    checkWin():boolean{
+        for(let i = 0; i < this.size; i++){
+            for(let j = 0; j < this.size; j++){
+                if(!this.board[i][j].touched && !this.board[i][j].hasMine) return false
+            }  
+        }
+        return true
+    }
     generateBoard() {
         //initial board
         for (let i = 0; i < this.size; i++) {
@@ -29,7 +36,6 @@ export class Minesweeper {
             if (!this.board[x][y].hasMine) {
                 this.board[x][y].hasMine = true
                 i++
-                console.log(i);
 
             }
         }
@@ -104,13 +110,15 @@ export class Minesweeper {
         return this.board[posX][posY]
     }
 
-    touchGird(posX: number, posY: number): boolean {
+    touchGird(posX: number, posY: number): number {
         let gird = this.board[posX][posY]
         if (gird.hasMine) {
             gird.touched = true
-            return true
+            return 0
         }
         this.checkMinesAround(posX, posY)
-        return false
+        
+        if(this.checkWin()) return 2
+        return 1
     }
 }

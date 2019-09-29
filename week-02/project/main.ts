@@ -25,23 +25,22 @@ while (!mines) {
     }
 }
 
-console.log(size, mines)
-
 const minesweeper = new Minesweeper(size, mines)
 
 minesweeper.generateBoard()
-let end = false
+let end = 0
 while (!end) {
     minesweeper.print()
     try {
         let input = rl.question('What field to reveal?')
-        if (minesweeper.touchGird(input[0].toUpperCase().charCodeAt() - 65, +input.slice(1))) {
-            minesweeper.print(true)
-            end = true
-        }
+        end = minesweeper.touchGird(input[0].toUpperCase().charCodeAt() - 65, +input.slice(1))
+        minesweeper.print(true)
+
+
     } catch (e) {
         console.log('wrong input!')
+        rl.flush()
     }
 }
-
-console.log(`you lose...`)
+if(end === 1) console.log('you lose...')
+else if(end === 2) console.log('you win!!!')
