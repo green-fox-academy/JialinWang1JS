@@ -1,0 +1,94 @@
+<header class="header">
+    <div class="header-item"></div>
+    <div class="header-item"></div>
+    <div class="header-item"></div>
+    <div class="header-item"></div>
+</header>
+<div class="container">    
+    <div class="content-up">
+        <div class="item flex-grow-1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsam, ea corrupti, ut asperiores similique doloremque modi officia explicabo autem in fuga dolorem earum cum amet nam, sequi tempore consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sint cumque reprehenderit fugit necessitatibus mollitia nesciunt inventore excepturi odio cupiditate. Consectetur nostrum ratione dignissimos voluptatibus voluptatum assumenda ea tenetur atque.
+        </div>
+        <div class="item flex-grow-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsam, ea corrupti, ut asperiores similique doloremque modi officia explicabo autem in fuga dolorem earum cum amet nam, sequi tempore consequatur!
+        </div>
+    </div>
+    <div class="content-down">
+        <div class="item flex-grow-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsam, ea corrupti, ut asperiores similique doloremque modi officia explicabo autem in fuga dolorem earum cum amet nam, sequi tempore consequatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sint cumque reprehenderit fugit necessitatibus mollitia nesciunt inventore excepturi odio cupiditate. Consectetur nostrum ratione dignissimos voluptatibus voluptatum assumenda ea tenetur atque.
+        </div>
+        <div class="item flex-grow-1">
+            <div class="red-cell"></div>
+        </div>
+        <div class="item flex-grow-1">
+            <div class="red-cell"></div>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+</div>
+
+<style>
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        background-color: purple;
+        padding-left: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .header-item{
+        height: 40px;
+        width: 150px;
+        margin: 10px;
+        background-color:cyan;
+    }
+    .flex-grow-1{
+        flex-grow: 1;
+    }
+    .flex-grow-2{
+        flex-grow: 2;
+    }
+    .container{
+        height: 90%;
+        width: 90%;
+        max-width: 90%;
+        margin: auto;
+        margin-top: 80px;
+    }
+    .content-up{
+        margin-left: 20px;
+        height: 40%;
+        display: flex;
+    }
+    .content-down{
+        margin-left: 20px;
+        height: 40%;
+        display: flex;
+    }
+    .item{
+        padding: 0 5px 0 5px;
+        width:0;
+        box-sizing:border-box;
+        background-color: green;
+        margin:20px 20px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .red-cell{
+        height: 80%;
+        width: 60%;
+        background-color: red;
+    }
+    .footer{
+        margin: auto;
+        margin-top: 20px;
+        height: 150px;
+        width: 98%;
+        background-color:grey;
+    }
+</style>

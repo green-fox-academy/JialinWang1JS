@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="header"></div>
+    <div class="content">
+        <div class="item orange"></div>
+        <div class="item main">
+            <div class="black-box"></div>
+        </div>
+        <div  class="item purple"></div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<style>
+    .container{
+        height: 70%;
+        width: 35%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header{
+        background-color: cyan;
+        height: 90px;
+    }
+    .content{
+        height: 70%;
+        display: flex;
+    }
+
+    .item{
+        flex-grow: 1;
+    }
+    .black-box{
+        width: 50px;
+        height: 50px;
+        background-color: black;
+    }
+    .main {
+        padding: 20px;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0 20px 0 20px;
+        flex-grow: 2;
+        background-color: red;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .footer{
+        background-color: blue;
+        height: 90px;
+    }
+    .purple{
+        background-color: purple;
+    }
+</style>

@@ -1,0 +1,66 @@
+
+    <nav class="navgation">
+            <div class="nav-item"></div>
+        <div class="nav-item grew"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+    </nav>
+    <div class="content">
+        <section class="main-content"></section>
+        <section class="sidebar"></section>
+    </div>
+    <footer class="footer"></footer>
+
+<style>   
+    
+    .navgation {
+        position:fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 70%;
+        padding-left: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 80px;
+        background-color: purple;
+    }
+    .content{
+        margin: auto;
+        margin-top: 90px;
+        height: 800px;
+        width: 90%;
+        display: flex;
+        justify-content:space-between;
+    }
+    .nav-item {
+        background-color:cyan;
+        width: 50px;
+        margin: 10px;
+        height: 50%;
+        flex-grow: 1;
+    }
+    .grew{
+        flex-grow: 2;
+    }
+    .main-content{
+        flex-grow: 1;
+        margin-right: 10px;
+        height: 100%;
+        background-color:yellow;
+    }
+    .sidebar{
+        flex-grow:2;
+        height: 100%;
+        background-color: green;
+    }
+    .footer{
+        height: 100px;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        background-color: gray;
+    }
+</style>

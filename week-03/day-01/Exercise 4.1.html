@@ -1,0 +1,55 @@
+<div class="container">
+    <nav class="navgation">
+        <div class="nav-item grew"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+    </nav>
+    <div class="content">
+        <section class="main-content"></section>
+        <section class="sidebar"></section>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;        
+        margin: auto;
+        width: 50%;
+        height: 80%;    
+        padding: 0;
+    }
+    .content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+    .navgation {
+        padding-right: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 60px;
+        background-color: purple;
+    }
+    .nav-item {
+        background-color:cyan;
+        width: 50px;
+        margin: 10px;
+        height: 50%;
+        flex-grow: 1;
+    }
+    .grew{
+        flex-grow: 2;
+    }
+    .main-content{
+        flex-grow: 2;
+        height: 100%;
+        background-color:yellow;
+    }
+    .sidebar{
+        flex-grow:1;
+        height: 100%;
+        background-color: green;
+    }
+</style>
