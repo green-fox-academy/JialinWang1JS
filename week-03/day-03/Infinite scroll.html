@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Infinite scroll</title>
+  </head>
+  <body>
+    <script>
+      let amount = Math.floor(Math.random() * 500)
+      let body = document.querySelector('body')
+      let bodyHeight = window.screen.height
+      let scrollThreshold = 40
+      let initAmount = parseInt(bodyHeight) / 200 - 1
+
+      document.addEventListener('scroll', event => {
+        console.log(document.documentElement.scrollTop + document.documentElement.clientHeight + scrollThreshold, document.documentElement.scrollHeight)
+        if (document.documentElement.scrollTop + document.documentElement.clientHeight + scrollThreshold >= document.documentElement.scrollHeight) generateDiv(10)
+      })
+
+      function generateDiv(amount) {
+        for (let i = 0; i < amount; i++) {
+          let div = document.createElement('div')
+          div.style.setProperty('background-color', randomColor())
+          body.insertBefore(div, body.lastChild)
+        }
+      }
+
+      function randomColor() {
+        let colorElements = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+          let randomNum = Math.floor(Math.random() * 16)
+          color += colorElements[randomNum]
+        }
+        return color
+      }
+
+      generateDiv(initAmount)
+    </script>
+
+    <!-- You can work in the html or in a separate js file. Like:
+      1) Subscibe to keyup events on the global window object
+      2) Console log the event object and peek inside
+      3) Display the last pressed key's code as "Last pressed key code is: __"
+    OR
+    <script src="keyup.js"></script> -->
+  </body>
+</html>
+<style>
+  div {
+    margin: 10px auto;
+    height: 200px;
+    width: 200px;
+  }
+</style>
