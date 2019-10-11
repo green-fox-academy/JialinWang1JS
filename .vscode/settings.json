@@ -1,0 +1,4 @@
+{
+  "eslint.autoFixOnSave": true,
+  "prettier.printWidth": 150
+}
