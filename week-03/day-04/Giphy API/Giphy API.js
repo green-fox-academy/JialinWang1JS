@@ -2,11 +2,13 @@
 
 // http.onreadystatechange = () => {
 //   console.log(http.readyState)
-//   if(http.readyState === 4 && http.status) console.log(http.response)
+//   if(http.readyState === 4 && http.status) console.log(JSON.parse(http.response))
 // }
 
 // http.open('GET', 'http://api.giphy.com/v1/gifs/search?api_key=4KO5fZF8agGySCIZvsf0DqOm4ayAAwlk&q=cheeseburgers', true)
 // http.send()
+
+
 let images = document.getElementById('images')
 let button = document.querySelector('button')
 button.addEventListener('click', () => {
