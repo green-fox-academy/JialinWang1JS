@@ -1,0 +1,21 @@
+<body>
+  <div class="downCount"></div>
+  <button>cancel!</button>
+</body>
+<script>
+  let start = new Date()
+  let button = document.querySelector('button')
+  let downCount = document.querySelector('.downCount')
+  let myVar = setTimeout(function() {
+    alert('5 seconds passed!')
+  }, 5000)
+
+  let intetval = setInterval(() => {
+    let end = new Date()
+    downCount.textContent = Math.round((end - start) / 10) / 100
+  }, 10)
+
+  button.addEventListener('click', () => {
+    clearTimeout(myVar)
+  })
+</script>

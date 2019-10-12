@@ -1,0 +1,36 @@
+<body>
+  <div class="downCount"></div>
+  <button>cancel!</button>
+</body>
+<script>
+  let start = new Date()
+  let button = document.querySelector('button')
+  let downCount = document.querySelector('.downCount')
+  let myVar
+
+  let intetval = setInterval(() => {
+    let end = new Date()
+    downCount.textContent = Math.round((end - start) / 10) / 100
+  }, 10)
+
+  
+  initPromise(button)
+  async function initPromise(button) {
+    try {
+      let p = await new Promise((resolve, reject) => {
+        button.addEventListener('click', () => {
+          reject()
+        })
+
+        myVar = setTimeout(function() {
+          resolve()
+          alert('5 seconds passed!')
+          clearInterval(intetval)
+        }, 5000)
+      })
+    } catch (e) {
+      clearTimeout(myVar)
+        clearInterval(intetval)
+    }
+  }
+</script>

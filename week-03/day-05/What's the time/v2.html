@@ -18,6 +18,7 @@
   time.textContent = start
 
   initPromise(button).then(sec => (seconds.textContent = sec))
+  
   function initPromise(button) {
     return new Promise((resolve, reject) => {
       button.addEventListener('click', () => {
