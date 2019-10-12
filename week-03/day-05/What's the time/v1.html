@@ -1,0 +1,22 @@
+<body>
+  <div>
+    <label>Script loaded at </label>
+    <label id="time"></label>
+  </div>
+  <div>
+    <button>Resolve</button>
+  </div>
+  <div>Button clicked after <label id="seconds"></label> seconds</div>
+</body>
+
+<script>
+  let button = document.querySelector('button')
+  let time = document.querySelector('#time')
+  let seconds = document.querySelector('#seconds')
+  let date = new Date()
+
+  time.textContent = date
+  button.addEventListener('click', () => {
+    seconds.textContent = Math.round((new Date() - date) / 10) / 100
+  })
+</script>

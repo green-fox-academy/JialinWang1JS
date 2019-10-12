@@ -1,0 +1,31 @@
+<body>
+  <div>
+    <label>Script loaded at </label>
+    <label id="time"></label>
+  </div>
+  <div>
+    <button>Resolve</button>
+  </div>
+  <div>Button clicked after <label id="seconds"></label> seconds</div>
+</body>
+
+<script>
+  let button = document.querySelector('button')
+  let time = document.querySelector('#time')
+  let seconds = document.querySelector('#seconds')
+  let start = new Date()
+
+  time.textContent = start
+  
+  initPromise(button)
+
+  async function initPromise(button) {
+    let p = await new Promise((resolve, reject) => {
+      button.addEventListener('click', () => {
+        let end = new Date()
+        resolve(Math.round((end - start) / 10) / 100)
+      })
+    })
+    seconds.textContent = p  
+  }
+</script>
