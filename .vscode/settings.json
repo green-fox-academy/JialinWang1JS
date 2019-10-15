@@ -1,4 +1,8 @@
 {
   "eslint.autoFixOnSave": true,
-  "prettier.printWidth": 150
+  "prettier.printWidth": 200,
+  "prettier.disableLanguages": [],
+  "prettier.jsxBracketSameLine": true,
+  "eslint.alwaysShowStatus": true
+
 }
