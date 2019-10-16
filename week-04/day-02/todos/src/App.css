@@ -1,47 +1,47 @@
 .heading {
-  font-family: 'Lato', sans-serif;
-  font-size: 64px;
-  color: #b8b8b8;
+	font-family: 'Lato', sans-serif;
+	font-size: 64px;
+	color: #b8b8b8;
 }
-.done{
-  color: #dfdede !important;  
+.done {
+	color: #dfdede !important;
 }
-.icons img{
-  padding: 0 5px;
+.icons img {
+	padding: 0 5px;
 }
 .todo-item {
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Lato', sans-serif;
-  font-size: 26px;
-  line-height: 2.2;
-  color: #b8b8b8;
+	padding: 0 50px;
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Lato', sans-serif;
+	font-size: 26px;
+	line-height: 2.2;
+	color: #b8b8b8;
 }
 
 .button-text {
-  font-family: 'Lato', sans-serif;
-  font-size: 26px;
-  color: #ffffff !important;
-  border-radius: 3px;
-  background-color: plum;
+	font-family: 'Lato', sans-serif;
+	font-size: 26px;
+	color: #ffffff !important;
+	border-radius: 3px;
+	background-color: plum;
 }
-body{
-  background-color: #45EEC5 ;
+body {
+	background-color: #45eec5;
 }
-.App{
-  text-align: center;
-  margin: 3% auto;
-  background-color: #ffffff;
-  border: solid 1px rgb(223, 220, 220);
-  border-radius: 3px;
-  width: 500px;
+.App {
+	text-align: center;
+	margin: 3% auto;
+	background-color: #ffffff;
+	border: solid 1px rgb(223, 220, 220);
+	border-radius: 3px;
+	width: 500px;
 }
-.inputField{
-  color: #b8b8b8;
-  font-size: 26px;
-  margin: 20px 0;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
+.inputField {
+	color: #b8b8b8;
+	font-size: 26px;
+	margin: 20px 0;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
 }

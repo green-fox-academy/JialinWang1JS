@@ -3,6 +3,7 @@
   "prettier.printWidth": 200,
   "prettier.disableLanguages": [],
   "prettier.jsxBracketSameLine": true,
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "prettier.singleQuote": true
 
 }

@@ -10,9 +10,9 @@ function TodoItem(props) {
 	const [title, setTitle] = useState(props.title)
 
 	return (
-		<div className={isDone ? 'todo-item done' :'todo-item' }>
+		<div className={isDone ? 'todo-item done' : 'todo-item'}>
 			<label>{title}</label>
-			<div className="icons">
+			<div className='icons'>
 				<img
 					onClick={() => {
 						props.deleteItem()
@@ -39,6 +39,7 @@ class App extends React.Component {
 			itemList: [],
 			input: ''
 		}
+		console.log(11)
 	}
 	addTodoItem() {
 		let input = this.state.input
@@ -60,31 +61,32 @@ class App extends React.Component {
 			input: event.target.value
 		})
 	}
-	deleteItem(item){
+	deleteItem(item) {
 		let itemList = this.state.itemList
 		let index = itemList.indexOf(item)
-		console.log(itemList ,index);
-		
+		console.log(itemList, index)
+
 		itemList.splice(index, 1)
-		
+
 		this.setState({
 			itemList: itemList
-		})		
+		})
 	}
 	render() {
 		let itemList = this.state.itemList
 		return (
 			<div className='App'>
 				<label className='heading'>TODOS</label>
-				<div className="inputField">
-					<input style={{height:40}} onChange={event => this.updateInput(event)} className='inputField'></input>
+				<div className='inputField'>
+					<input style={{height: 40}} onChange={event => this.updateInput(event)} className='inputField'></input>
 					<button onClick={() => this.addTodoItem()} className='inputField button-text'>
 						Add
 					</button>
 				</div>
 				{itemList.map((item, itemIndex) => {
 					return (
-						<TodoItem key={itemIndex}
+						<TodoItem
+							key={itemIndex}
 							title={item.title}
 							isDone={item.isDone}
 							deleteItem={() => {
