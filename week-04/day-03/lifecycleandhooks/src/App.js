@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import './App.css'
 
 function Component1(props) {
-	console.log('c1')
-
 	useEffect(() => {
 		let startTime = new Date()
 
@@ -22,8 +20,6 @@ function Component1(props) {
 }
 
 function Component2(props) {
-	console.log('c2')
-
 	useEffect(() => {
 		let startTime = new Date()
 
@@ -41,11 +37,31 @@ function Component2(props) {
 }
 
 function App() {
-	let [recordList, addRecord] = useState([])
-	let addRecordTo = record => {
-		console.log(recordList)
+	const [temp, setTemp] = React.useState(5)
+	//for Demo
+	// const log = () => {
+	// 	setTimeout(() => {
+	// 		console.log('3 秒前 temp = 5，现在 temp =', temp)
+	// 	}, 3000)
+	// }
 
-		addRecord([...recordList, record])
+	// return (
+	// 	<div
+	// 		onClick={() => {
+	// 			log()
+	// 			setTemp(3)
+	// 			// 3 秒前 temp = 5，现在 temp = 5
+	// 		}}>
+	// 		xyz
+	// 	</div>
+	// )
+
+	let [recordList, addRecord] = useState([])
+	let lastestList = useRef(recordList)
+
+	lastestList.current = recordList
+	let addRecordTo = record => {
+		addRecord([...lastestList.current, record])
 	}
 	return (
 		<Router>
