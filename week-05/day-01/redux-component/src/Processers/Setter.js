@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import './processers.css'
 import {connect} from 'react-redux'
 
 function Setter(props) {

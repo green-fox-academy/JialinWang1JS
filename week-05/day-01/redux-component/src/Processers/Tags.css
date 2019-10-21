@@ -1,0 +1,18 @@
+.tag-list{
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.tag{
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+}
+
+.blue{
+  background-color: #62aae4;
+}
+
+.red{
+  background-color: rgb(230, 81, 81);
+}

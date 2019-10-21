@@ -1,5 +1,4 @@
 import React from 'react'
-import './processers.css'
 import {connect} from 'react-redux'
 
 function Increaser(props) {

@@ -1,10 +1,13 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Increaser from './Processers/Increaser'
 import Decreaser from './Processers/Decreaser'
 import Resetter from './Processers/Resetter'
 import Setter from './Processers/Setter'
+import Tags from './Processers/Tags'
+import AddTag from './Processers/AddTag'
+import RemoveTag from './Processers/RemoveTag'
+import ComplexCounter from "./Processers/ComplexCounter";
 
 function App() {
 	return (
@@ -13,6 +16,10 @@ function App() {
 			<Decreaser></Decreaser>
 			<Resetter></Resetter>
 			<Setter></Setter>
+			<Tags></Tags>
+			<AddTag></AddTag>
+			<RemoveTag></RemoveTag>
+			<ComplexCounter></ComplexCounter>
 		</div>
 	)
 }
