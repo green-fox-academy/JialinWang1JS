@@ -5,18 +5,19 @@ import Viewer from '../Viewer/Viewer.js'
 import Thumbnail from '../Thumbnail/Thumbnail.js'
 
 function App() {
-	const [imgList, setImgList] = useState(imageList)
-  const [imgIndex, setimgIndex] = useState(0)
-  let lastestIndex = useRef(imgIndex)
+	console.log(111)
 
-  lastestIndex.current = imgIndex
+	const [imgList, setImgList] = useState(imageList)
+	const [imgIndex, setimgIndex] = useState(0)
+	let lastestIndex = useRef(imgIndex)
+
+	lastestIndex.current = imgIndex
 
 	useEffect(() => {
 		document.documentElement.addEventListener('keydown', handleKeyDown)
 	}, [])
 
 	const handleKeyDown = event => {
-
 		if (event.keyCode === 37) {
 			let index = (lastestIndex.current - 1) % imageList.length
 

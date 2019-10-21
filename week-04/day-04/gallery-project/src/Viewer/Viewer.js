@@ -6,7 +6,6 @@ import './Viewer.css'
 export default function Viewer(props) {
 	const [arrowImgL, setArrowImgL] = useState(arrowUnclicked)
 	const [arrowImgR, setArrowImgR] = useState(arrowUnclicked)
-
 	return (
 		<div className='Viewer'>
 			<section
@@ -21,8 +20,7 @@ export default function Viewer(props) {
 					onMouseEnter={() => setArrowImgL(arrowClicked)}
 					src={arrowImgL}></img>
 			</section>
-			<section
-				className='Viewer-image-content'>
+			<section className='Viewer-image-content'>
 				<img alt='' src={props.url}></img>
 				<section className='Viewer-image-content-description'>
 					<h1>{props.header}</h1>

@@ -5,29 +5,49 @@
   "main": "index.js",
   "dependencies": {
     "react-router-dom": "^5.1.2",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "redux": "^4.0.4"
   },
-  "eslintConfig ":{
+  "eslintConfig ": {
     "parser": "babel-eslint",
     "parserOptions": {
-    "sourceType": "module",
-    "allowImportExportEverywhere": false,
-    "codeFrame": false
-},
-"extends": ["airbnb", "prettier"],
-"env": {
-    "browser": true,
-    "jest": true
-},
-"rules": {
-    "max-len": ["error", {"code": 100}],
-    "prefer-promise-reject-errors": ["off"],
-    "react/jsx-filename-extension": ["off"],
-    "react/prop-types": ["warn"],
-    "no-return-assign": ["off"]
-  }
-},
-  "devDependencies": {},
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "codeFrame": false
+    },
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 100
+        }
+      ],
+      "prefer-promise-reject-errors": [
+        "off"
+      ],
+      "react/jsx-filename-extension": [
+        "off"
+      ],
+      "react/prop-types": [
+        "warn"
+      ],
+      "no-return-assign": [
+        "off"
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

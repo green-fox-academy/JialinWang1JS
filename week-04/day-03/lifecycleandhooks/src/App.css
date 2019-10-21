@@ -1,8 +1,11 @@
 .App {
-	text-align: center;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+}
+h3 {
+	text-align: center;
 }
 table {
 	margin: auto;

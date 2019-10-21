@@ -4,49 +4,78 @@ import './App.css'
 import {createStore} from 'redux'
 
 const initState = {
-	counter: 0,
-	tags: []
+	tagList: []
 }
-const store = createStore(reducer)
+const store = createStore(tagReducer)
 
-function reducer(state = initState, action) {
-	if (action.type === 'SET') {
-		return {
-			...state,
-			counter: action.amount
+function tagReducer(state = initState, action) {
+	if (action.type === 'ADD_TAG') {
+		if (state.tagList.indexOf(action.tag) === -1) {
+			return {
+				tagList: [...state.tagList, action.tag]
+			}
 		}
-	} else if (action.type === 'INCREASE') {
-		return {
-			...state,
-			counter: action.amount ? state.counter + action.amount : ++state.counter
+	} else if (action.type === 'REMOVE_TAG') {
+		if (state.tagList.indexOf(action.tag) !== -1) {
+			return {
+				tagList: state.tagList.filter(tag => tag !== action.tag)
+			}
 		}
-	} else if (action.type === 'RESET') {
+	} else if (action.type === 'REMOVE_TAGS') {
 		return {
-			...state,
-			counter: 0
-		}
-	} else if (action.type === 'DECREASE') {
-		return {
-			...state,
-			counter: action.amount ? state.counter - action.amount : --state.counter
+			tagList: []
 		}
 	}
 	return state
 }
+// const initState = {
+// 	counter: 0,
+// 	tags: []
+// }
+// const store = createStore(reducer)
+
+// function reducer(state = initState, action) {
+// 	if (action.type === 'SET') {
+// 		return {
+// 			...state,
+// 			counter: action.amount
+// 		}
+// 	} else if (action.type === 'INCREASE') {
+// 		return {
+// 			...state,
+// 			counter: action.amount ? state.counter + action.amount : ++state.counter
+// 		}
+// 	} else if (action.type === 'RESET') {
+// 		return {
+// 			...state,
+// 			counter: 0
+// 		}
+// 	} else if (action.type === 'DECREASE') {
+// 		return {
+// 			...state,
+// 			counter: action.amount ? state.counter - action.amount : --state.counter
+// 		}
+// 	}
+// 	return state
+// }
 
 function App() {
-
 	store.subscribe(() => {
-		console.log(store.getState().counter)
-  })
-  
-	store.dispatch({type: 'SET', amount: 6})
-	store.dispatch({type: 'INCREASE'})
-	store.dispatch({type: 'INCREASE', amount: 2})
-	store.dispatch({type: 'RESET'})
-	store.dispatch({type: 'INCREASE'})
-	store.dispatch({type: 'DECREASE', amount: 4})
+		console.log(store.getState().tagList)
+	})
 
+	// store.dispatch({type: 'SET', amount: 6})
+	// store.dispatch({type: 'INCREASE'})
+	// store.dispatch({type: 'INCREASE', amount: 2})
+	// store.dispatch({type: 'RESET'})
+	// store.dispatch({type: 'INCREASE'})
+	// store.dispatch({type: 'DECREASE', amount: 4})
+	store.dispatch({type: 'ADD_TAG', tag: 'blue'})
+	store.dispatch({type: 'ADD_TAG', tag: 'bold'})
+	store.dispatch({type: 'ADD_TAG', tag: 'hipster'})
+	store.dispatch({type: 'REMOVE_TAG', tag: 'blue'})
+	store.dispatch({type: 'ADD_TAG', tag: 'bold'})
+	store.dispatch({type: 'REMOVE_TAGS'})
 	return (
 		<div className='App'>
 			<header className='App-header'>
