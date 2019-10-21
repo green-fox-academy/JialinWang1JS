@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "readline-sync": "^1.4.10",
     "redux": "^4.0.4"
