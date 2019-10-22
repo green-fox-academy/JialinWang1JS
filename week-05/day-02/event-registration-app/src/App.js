@@ -1,21 +1,60 @@
-import React from 'react'
-import logo from './logo.svg'
+import React, { useState } from 'react'
 import './App.css'
-
-function App() {
+import { connect } from 'react-redux'
+function App(props) {
+	const [strArray, setStrArray] = useState(['', '', ''])
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-					Learn React
-				</a>
-			</header>
+			<input
+				type='text'
+				placeholder='First Name'
+				onChange={event => {
+					let array = strArray
+					array[0] = event.target.value
+					setStrArray(array)
+				}}
+			/>
+			<input
+				type='text'
+				placeholder='Last name'
+				onChange={event => {
+					let array = strArray
+					array[1] = event.target.value
+					setStrArray(array)
+				}}
+			/>
+			<input
+				type='text'
+				placeholder='Email address'
+				onChange={event => {
+					let array = strArray
+					array[2] = event.target.value
+					setStrArray(array)
+				}}
+			/>
+			<button onClick={() => props.addSomething(strArray)}>Submit</button>
+      <ul>
+        <li>{props.firstName}</li>
+        <li>{props.lastName}</li>
+        <li>{props.emailAddress}</li>
+      </ul>
 		</div>
 	)
 }
 
-export default App
+const mapStateToProps = state => {
+	return {
+		...state
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		addSomething: strArray => dispatch({ type: 'ADD', strArray })
+	}
+}
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(App)
