@@ -33,18 +33,20 @@ function App(props) {
 				}}
 			/>
 			<button onClick={() => props.addSomething(strArray)}>Submit</button>
-      <ul>
-        <li>{props.firstName}</li>
-        <li>{props.lastName}</li>
-        <li>{props.emailAddress}</li>
-      </ul>
+			<ul>
+				<li>{props.firstName}</li>
+				<li>{props.lastName}</li>
+				<li>{props.emailAddress}</li>
+			</ul>
 		</div>
 	)
 }
 
 const mapStateToProps = state => {
 	return {
-		...state
+		firstName: state.firstName,
+		lastName: state.lastName,
+		emailAddress: state.emailAddress
 	}
 }
 
