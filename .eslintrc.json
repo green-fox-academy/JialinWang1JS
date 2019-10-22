@@ -1,0 +1,19 @@
+{
+	"root": true,
+	"extends": ["airbnb", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": ["react", "prettier"],
+	"rules": {
+		
+		"space-in-brackets": ["error", "never"],
+		"quotes": ["error", "single"],
+		"prettier/prettier": "off",
+		"semi": ["off"]
+	}
+}

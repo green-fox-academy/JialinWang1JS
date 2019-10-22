@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import {createStore} from 'redux'
+import { createStore } from 'redux'
 
 const initState = {
 	tagList: []
@@ -70,12 +70,12 @@ function App() {
 	// store.dispatch({type: 'RESET'})
 	// store.dispatch({type: 'INCREASE'})
 	// store.dispatch({type: 'DECREASE', amount: 4})
-	store.dispatch({type: 'ADD_TAG', tag: 'blue'})
-	store.dispatch({type: 'ADD_TAG', tag: 'bold'})
-	store.dispatch({type: 'ADD_TAG', tag: 'hipster'})
-	store.dispatch({type: 'REMOVE_TAG', tag: 'blue'})
-	store.dispatch({type: 'ADD_TAG', tag: 'bold'})
-	store.dispatch({type: 'REMOVE_TAGS'})
+	store.dispatch({ type: 'ADD_TAG', tag: 'blue' })
+	store.dispatch({ type: 'ADD_TAG', tag: 'bold' })
+	store.dispatch({ type: 'ADD_TAG', tag: 'hipster' })
+	store.dispatch({ type: 'REMOVE_TAG', tag: 'blue' })
+	store.dispatch({ type: 'ADD_TAG', tag: 'bold' })
+	store.dispatch({ type: 'REMOVE_TAGS' })
 	return (
 		<div className='App'>
 			<header className='App-header'>
@@ -83,11 +83,7 @@ function App() {
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'>
+				<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
 					Learn React
 				</a>
 			</header>

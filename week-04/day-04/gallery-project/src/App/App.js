@@ -5,8 +5,6 @@ import Viewer from '../Viewer/Viewer.js'
 import Thumbnail from '../Thumbnail/Thumbnail.js'
 
 function App() {
-	console.log(111)
-
 	const [imgList, setImgList] = useState(imageList)
 	const [imgIndex, setimgIndex] = useState(0)
 	let lastestIndex = useRef(imgIndex)
@@ -44,15 +42,7 @@ function App() {
 
 				<section className='thumbnail-list'>
 					{imgList.map((img, index) => {
-						return (
-							<Thumbnail
-								index={index}
-								onArrowClick={onArrowClick}
-								picked={index === imgIndex}
-								key={index}
-								header={img.header}
-								url={img.url}></Thumbnail>
-						)
+						return <Thumbnail index={index} onArrowClick={onArrowClick} picked={index === imgIndex} key={index} header={img.header} url={img.url}></Thumbnail>
 					})}
 				</section>
 			</div>
