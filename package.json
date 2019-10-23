@@ -1,76 +1,84 @@
 {
-  "name": "JialinWang1JS",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "react-redux": "^7.1.1",
-    "react-router-dom": "^5.1.2",
-    "readline-sync": "^1.4.10",
-    "redux": "^4.0.4"
-  },
-  "eslintConfig ": {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "sourceType": "module",
-      "allowImportExportEverywhere": false,
-      "codeFrame": false
-    },
-    "extends": [
-      "airbnb",
-      "prettier"
-    ],
-    "env": {
-      "browser": true,
-      "jest": true
-    },
-    "rules": {
-      "max-len": [
-        "error",
-        {
-          "code": 100
-        }
-      ],
-      "prefer-promise-reject-errors": [
-        "off"
-      ],
-      "react/jsx-filename-extension": [
-        "off"
-      ],
-      "react/prop-types": [
-        "warn"
-      ],
-      "no-return-assign": [
-        "off"
-      ]
-    }
-  },
-  "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-node": "^4.0.0",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-flowtype": "^4.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.18.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/green-fox-academy/JialinWang1JS.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/green-fox-academy/JialinWang1JS/issues"
-  },
-  "homepage": "https://github.com/green-fox-academy/JialinWang1JS#readme"
+	"name": "JialinWang1JS",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"react-redux": "^7.1.1",
+		"react-router-dom": "^5.1.2",
+		"readline-sync": "^1.4.10",
+		"redux": "^4.0.4"
+	},
+	"eslintConfig ": {
+		"parser": "babel-eslint",
+		"parserOptions": {
+			"sourceType": "module",
+			"allowImportExportEverywhere": false,
+			"codeFrame": false
+		},
+		"extends": [
+			"airbnb",
+			"prettier"
+		],
+		"plugins": [
+			"react",
+			"prettier"
+		],
+		"env": {
+			"browser": true,
+			"jest": true
+		},
+		"rules": {
+			"max-len": [
+				"error",
+				{
+					"code": 100
+				}
+			],
+			"prefer-promise-reject-errors": [
+				"off"
+			],
+			"react/jsx-filename-extension": [
+				"off"
+			],
+			"react/prop-types": [
+				"warn"
+			],
+			"no-return-assign": [
+				"off"
+			],
+			"quotes": [
+				2,
+				"double"
+			]
+		}
+	},
+	"devDependencies": {
+		"eslint": "^6.1.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-node": "^4.0.0",
+		"eslint-config-prettier": "^6.4.0",
+		"eslint-plugin-flowtype": "^4.3.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^1.7.0",
+		"prettier": "^1.18.2"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/green-fox-academy/JialinWang1JS.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/green-fox-academy/JialinWang1JS/issues"
+	},
+	"homepage": "https://github.com/green-fox-academy/JialinWang1JS#readme"
 }
