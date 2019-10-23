@@ -39,9 +39,9 @@ function App(props) {
 			<label>Topping 3</label>
 			<p />
 
-			<input onClick={() => props.addOptionTo('CUT', true)} checked={props.needCut} name='Cut ' type='radio' />
+			<input onChange={() => props.addOptionTo('CUT', true)} checked={props.needCut} name='Cut ' type='radio' />
 			<label>cut</label>
-			<input onClick={() => props.addOptionTo('CUT', false)} name='Cut ' type='radio' />
+			<input onChange={() => props.addOptionTo('CUT', false)} name='Cut ' type='radio' />
 			<label>not cut</label>
 			<p />
 
