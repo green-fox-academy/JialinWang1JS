@@ -13,12 +13,13 @@ const initState = {
 
 function reducer(state = initState, action) {
 	if (action.type === FETCH_CHAT_DATA) {
-		return {
-			...state,
+    return {
+      ...state,
 			loading: true
 		}
 	} else if (action.type === FETCH_CHAT_DATA_SUCCESS) {
-		return {
+    console.log(FETCH_CHAT_DATA_SUCCESS)
+    return {
       ...state,
 			messages: action.messages,
 			loading: false
