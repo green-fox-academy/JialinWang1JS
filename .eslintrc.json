@@ -10,7 +10,7 @@
 	"plugins": ["react", "prettier"],
 	"rules": {
 		"prettier/prettier": "warn",
-		"quotes": [2, "single"],
+		"quotes": [2, "double"],
 		"import/no-extraneous-dependencies": "off"
 	}
 }
