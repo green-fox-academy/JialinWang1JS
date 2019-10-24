@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<h1>Cocktails</h1>
+		<div>
+			<a href="/">ALL</a>
+			<% for(alcohol of alcohols) {%>
+			<a href="/?alcohol=<%= alcohol %>"><%= alcohol %></a>
+			<% } %>
+		</div>
+		<table>
+			<thead>
+				<th>NAME</th>
+				<th>PRICE</th>
+			</thead>
+			<tbody>
+				<% for(cocktail of cocktails) {%>
+				<tr>
+					<td>
+						<div>
+							<label><%= cocktail.name %></label>
+							<label><%= cocktail.isAlcoholic ? '' : '(non-alcoholic)' %></label>
+						</div>
+						<div>
+							<label><%= cocktail.contains %></label>
+						</div>
+					</td>
+					<td><label><%= cocktail.price %> Ft</label></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</body>
+</html>
