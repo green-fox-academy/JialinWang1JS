@@ -9,8 +9,9 @@
 	},
 	"plugins": ["react", "prettier"],
 	"rules": {
-		"prettier/prettier": "warn",
-		"quotes": [2, "double"],
-		"import/no-extraneous-dependencies": "off"
+		"prettier/prettier": "off",
+		"quotes": [2, "single"],
+		"import/no-extraneous-dependencies": "off",
+		"no-console":0
 	}
 }
