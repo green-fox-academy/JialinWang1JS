@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <% for(f of forecastsToShow) { %>
+      <a href="city/<%= f.city %>">
+        <div class="city">
+          <div class="city-name">
+            <label><h1><%= f.city %></h1></label>
+            <label><%= f.location %></label>
+          </div>
+          <div>
+            <label class="city-temp"><%= f.weather[0].temp %>°C</label>
+          </div>
+          <div><img width="100px" src="<%= f.weather[0].icon %>.png" /></div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </body>
+</html>

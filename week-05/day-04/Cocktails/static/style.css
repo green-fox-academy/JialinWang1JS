@@ -1,13 +1,8 @@
-table tr:nth-child(even) {
-	background: rgb(241, 241, 241);
+body{
+  background-color: rgb(194, 189, 189);
 }
-table tr {
-	background-color: rgb(201, 200, 200);
-}
-table th{
-  background-color: black;
-  color: #fff;
-}
-td{
-  padding: 5px;
+.container{
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
 }
