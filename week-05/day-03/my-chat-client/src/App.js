@@ -9,7 +9,7 @@ const USER = 'Garrin'
 function App({ state, fetchData, sendData }) {
 	const [text, setText] = useState('')
 
-	let { messages, sendRecords } = state
+	let { messages, sendRecords, loadDone } = state
 	useEffect(() => {
 		setInterval(() => fetchData(), 5000)
 		fetchData()
@@ -28,11 +28,16 @@ function App({ state, fetchData, sendData }) {
 	}
 	return (
 		<div className='App'>
-			<ChatWindow
-				messages={messages.sort(function(a, b) {
-					return a.id - b.id
-				})}
-			/>
+			{loadDone ? (
+				<ChatWindow
+					messages={messages.sort(function(a, b) {
+						return a.id - b.id
+					})}
+				/>
+			) : (
+				<></>
+			)}
+
 			<textarea
 				onKeyDown={handleEnter}
 				className='text-input'

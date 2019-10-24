@@ -7,7 +7,8 @@ const URL = 'https://stream-vanadium.glitch.me/messages'
 const initState = {
 	sendRecords: [],
 	messages: [],
-	loading: false,
+  loading: false,
+  loadDone: false,
 	sending: false
 }
 
@@ -22,7 +23,8 @@ function reducer(state = initState, action) {
     return {
       ...state,
 			messages: action.messages,
-			loading: false
+      loading: false,
+      loadDone:true
 		}
 	} else if (action.type === SEND_CHAT_DATA) {
 		return {

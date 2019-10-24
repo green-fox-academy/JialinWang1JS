@@ -5,8 +5,9 @@ export default function ChatWindow({ messages }) {
 	let chatRef = React.createRef()
 	useEffect(() => {
 		let chatWindow = chatRef.current
+
 		chatWindow.scrollTop = chatWindow.scrollHeight - chatWindow.clientHeight
-	})
+	}, [])
 	return (
 		<div ref={chatRef} className='chat-window'>
 			{messages.map(message => {
