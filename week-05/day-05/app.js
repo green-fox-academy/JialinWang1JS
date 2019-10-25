@@ -44,35 +44,65 @@ app.get('/greeter', (req, res) => {
 
 app.get('/appenda/:appendable', (req, res) => {
   const { appendable } = req.params
-   if(appendable){
-     
+  if (appendable) {
     res.json({
-      appended: `${appendable  }a`
+      appended: `${appendable}a`
     })
-   }
-   else{
-     res.status(404)
-   }
+  } else {
+    res.status(404)
+  }
 })
 
 app.post('/dountil/:action', (req, res) => {
-  let {until} = req.body
-  const {action} = req.params
+  let { until } = req.body
+  const { action } = req.params
   // eslint-disable-next-line no-unused-vars
   let result = 0
-  if(action === 'sum') {
-    while(until){
+  if (action === 'sum') {
+    while (until) {
       result += until--
     }
-  }
-  else if (action === 'factor'){
+  } else if (action === 'factor') {
     result = 1
-    while(until){
+    while (until) {
       result *= until--
     }
-  }
-  else {
+  } else {
     result = 'Please provide a number!'
+  }
+  res.json({
+    result
+  })
+})
+
+app.post('/arrays', (req, res) => {
+  const { what, numbers } = req.body
+  let result = 0
+
+  if (!what || !numbers)
+    res.json({
+      error: what ? 'Please provide the numbers!' : 'Please provide what to do with the numbers!'
+    })
+  else if (what === 'sum') {
+    numbers.forEach(num => {
+      result += num
+    })
+  } else if (what === 'multiply') {
+    result = 1
+    numbers.forEach(num => {
+      result *= num
+    })
+  } else if (what === 'double') {
+    for (let i = 0; i < numbers.length; i++) {
+      numbers[i] += numbers[i]
+    }
+    res.json({
+      result: numbers
+    })
+  } else {
+    res.json({
+      result: 'wrong action'
+    })
   }
   res.json({
     result
