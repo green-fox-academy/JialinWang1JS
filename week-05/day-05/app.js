@@ -76,6 +76,8 @@ app.post('/dountil/:action', (req, res) => {
 })
 
 app.post('/arrays', (req, res) => {
+  console.log('array')
+
   const { what, numbers } = req.body
   let result = 0
 
@@ -96,9 +98,7 @@ app.post('/arrays', (req, res) => {
     for (let i = 0; i < numbers.length; i++) {
       numbers[i] += numbers[i]
     }
-    res.json({
-      result: numbers
-    })
+    result = numbers
   } else {
     res.json({
       result: 'wrong action'

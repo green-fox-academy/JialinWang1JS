@@ -13,6 +13,7 @@ import RemoveAllTags from './Processers/RemoveAllTags'
 function App() {
   return (
     <div className='App'>
+      {console.log(func())}
       <Increaser></Increaser>
       <Decreaser></Decreaser>
       <Resetter></Resetter>
@@ -21,7 +22,7 @@ function App() {
       <AddTag></AddTag>
       <RemoveTag></RemoveTag>
       <ComplexCounter></ComplexCounter>
-	  <RemoveAllTags></RemoveAllTags>
+      <RemoveAllTags></RemoveAllTags>
     </div>
   )
 }
