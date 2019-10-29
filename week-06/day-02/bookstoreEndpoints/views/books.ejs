@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <table>
+      <thead>
+          <td>Title</td>
+          <td>Author</td>
+          <td>category</td>
+          <td>Publisher</td>
+          <td>price</td>
+      </thead>
+      <tbody>
+        <% for(book of bookList){ %>
+          <tr>
+            <td><%= book.book_name %></td>
+            <td><%= book.aut_name %></td>
+            <td><%= book.cate_descrip %></td>
+            <td><%= book.pub_name %></td>
+            <td><%= book.book_price %> $</td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+    
+  </body>
+</html>
